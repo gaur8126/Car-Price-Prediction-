@@ -1,7 +1,7 @@
 import os 
 
 DATA_DIR = 'data'
-DATA_FILE_NAME = 'car-detials.csv'
+DATA_FILE_NAME = 'car-details.csv'
 DATA_FILE_PATH = os.path.join(DATA_DIR, DATA_FILE_NAME)
 
 
