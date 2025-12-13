@@ -1,9 +1,8 @@
 version: '3.9'
 
-
 services:
   api:
-    build:
+    build: .
     container_name: fastapi-app
     ports:
       - "8000:8000"
@@ -21,7 +20,7 @@ services:
     image: redis:alpine
     container_name: redis1
     ports:
-      - 6379:6379
+      - "6379:6379"
     networks:
       - backend
 
@@ -45,6 +44,6 @@ services:
     networks:
       - backend
 
-  networks:
-    backend:
-      driver:bridge
+networks:
+  backend:
+    driver: bridge

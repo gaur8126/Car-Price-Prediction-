@@ -18,6 +18,7 @@ df = (
     .drop(columns=['name','model','edition'])
 )
 
+
 X = df.drop(columns='selling_price')
 y = df.selling_price.copy()
 
@@ -42,7 +43,7 @@ preprocessor = ColumnTransformer(transformers=[
 ])
 
 regressor = RandomForestRegressor(
-    n_estimators=10,max_depth=10, random_state=42,
+    n_estimators=10, max_depth=5, random_state=42
 )
 
 rf_model = Pipeline(steps=[
